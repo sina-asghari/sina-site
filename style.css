@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10%;
+    background-color: #001a33;
+    font-family: "Poppins", sans-serif;
+    z-index: 1;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    /* font-weight: bold; */
+    font-size: 14px;
+    
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        background-color: #001a33;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.container1{
+    margin: 0 auto; 
+    margin-top: 120px; 
+    display: block;
+    z-index: 0;   
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+
+}
+
+.card{  
+    
+    border: 1px solid #c5c1c1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    content: normal;
+    width: 60%;
+    background: rgb(255, 255, 255);
+ 
+}
+
+.container{
+    margin: 0 auto;
+    margin-top: 25px;
+    z-index: 0;
+    color: black;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.dark{
+    display: inline-block;
+    margin-top: 10px;
+
+}
+.light{
+display: inline-block;
+margin-top: 10px;
+color:#f4511e;
+
+}
+
+.light , .dark{
+    justify-content: space-around;
+    width: 70px;
+    
+
+}
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .modenote{
+      padding-bottom: 10px;
+      color: rgb(41, 41, 41);
+  }
+
+  .button {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    /* cursor: pointer; */
+  }
+/*   
+  .button:hover {opacity: 1}
+  .buttond:hover {opacity: 1} */
+
+.pl{
+    padding: 12px;
+    margin-top:10px ;
+    border-radius: 10px;
+    background-color: #f4511e;
+    display: inline-block;
+}
+  
+
+/* @keyframes mymove {
+    from {background-color: #99ccff;}
+    to {background-color: #000000;}
+ 
+  }
+
+html{
+    background: #99ccff;
+    animation: mymove 5s infinite; 
+  } */

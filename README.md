@@ -1,3 +1,3 @@
 # sina-site
-light mode and dark mode 
+light mode and dark mode and
 navbar

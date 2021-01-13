@@ -45,7 +45,7 @@ function switchLight(value){
         document.querySelector('html').style="background:#666666 ;";
         lightbulb.style='width:226px;'
         document.getElementById('pl').innerHTML='Light Is Off'
-        document.getElementById('pl').style='background-color:gray;'
+        // document.getElementById('pl').style='background-color:gray;'
         
     }
    
